@@ -22,6 +22,17 @@ over many unattended runs, not a one-off demo.
    `none`, this is its first check - gather everything currently there,
    not just "recent" activity.
 
+   If a `gh api` call returns a 403 rate-limit error while gathering a
+   repo's activity, wait about 60 seconds and retry that call once
+   before giving up. If it still fails, skip that repo for this run
+   only, note the skip and its cause in today's entry, and continue
+   gathering the remaining repos. (Seen 3 times for
+   project-5-codify-body - 2026-08-10, 2026-08-12, 2026-08-14 - always
+   a `gh api` 403 rate-limit right after listing commits, always
+   handled by skipping the repo outright with no retry attempted. A
+   single retry after a short wait is the smallest change likely to
+   get past a transient rate limit before falling back to a skip.)
+
 3. **Draft (implementer).** Write a short digest: what changed, per
    repo, in plain sentences. If a repo had nothing new, say so plainly
    instead of padding the digest with filler.
