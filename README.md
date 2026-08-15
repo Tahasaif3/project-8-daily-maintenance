@@ -37,3 +37,13 @@ log. Meant to run unattended, for real, not just demoed once.
   were checked against real data each time, not because nobody looked.
 - Concept 15, honestly: did my understanding of what this loop is doing
   keep up with what it's actually changing? See `REFLECTION.md`.
+
+## Status
+- Routine created and active, scheduled daily at 9:00 GMT+5
+  (`https://claude.ai/code/routines/trig_01TXhHSddbExcJKD65BSXCx6`).
+- Run 1 (manual, 2026-08-15): found real activity across all three
+  repos, drafted and verified a digest, opened PR #1 in this repo, which
+  was reviewed and merged into `main`. Full writeup: `REFLECTION.md`.
+- Next scheduled fire: 2026-08-16, unattended. The "ran for a week"
+  criterion accumulates from here - check `progress.md`'s `## Entries`
+  for how many days have actually landed since.
