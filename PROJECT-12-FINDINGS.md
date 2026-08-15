@@ -41,8 +41,15 @@ Verified independently (not just trusting the routine's own summary): read the a
   guess.** Yes - three dated entries quoted verbatim in the PR body.
 - **A deliberately planted repeated failure gets caught and turned into
   a proposal.** Yes - the 3x rate-limit pattern, caught precisely.
-- **Nothing changed without a human merging it.** Yes - PR #2 is open,
-  unmerged, waiting on review. `main` still has the old `SKILL.md`.
+- **Nothing changed without a human merging it.** Yes - PR #2 sat open,
+  unmerged, until reviewed by hand and merged on 2026-08-15 at 07:12 UTC.
+  `main` only picked up the retry fix because that review happened -
+  the loop itself never had merge access.
+
+## After merge
+`main` now runs the retry-once fix. The next real weekly fire (17 Aug)
+starts from `last_reviewed_entry_date: 2026-08-15` - it will only see
+whatever repeats after that point, not the pattern that's already fixed.
 
 ## The one honest failure mode this proves it avoids
 An improvement loop that always finds something to propose - whether or
