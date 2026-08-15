@@ -12,6 +12,32 @@ project-6-doorbell-loop: 4d4a2a25712d185c911768c3025384575f44c822
 
 ## Entries
 
+### 2026-08-09
+Quiet day. All three watched repos checked, nothing new since last time.
+
+### 2026-08-10
+project-5-codify-body check failed partway through: `gh api` returned a
+403 rate-limit error right after listing commits. Skipped that repo for
+this run. project-4-fix-loop and project-6-doorbell-loop checked fine,
+nothing new.
+
+### 2026-08-11
+All three repos checked cleanly. Nothing new anywhere.
+
+### 2026-08-12
+project-5-codify-body check failed again: same `gh api` 403 rate-limit
+error, same point in the run (right after listing commits). Skipped that
+repo again. Other two repos fine.
+
+### 2026-08-13
+Quiet day. All three repos checked, nothing new.
+
+### 2026-08-14
+project-5-codify-body check failed a third time: identical `gh api` 403
+rate-limit signature, same point in the run. Skipped again. Unrelated,
+one-off: this run's commit message to NOTES.md had a typo ("mainatenance"
+instead of "maintenance") - harmless, did not recur.
+
 ### 2026-08-15
 First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
