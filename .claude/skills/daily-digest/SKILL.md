@@ -38,8 +38,9 @@ over many unattended runs, not a one-off demo.
      to `progress.md`. Do not touch `NOTES.md` - a commit for "nothing
      happened" is noise.
    - If something new was found: append the dated digest to `NOTES.md`,
-     commit and push directly to `main` (the review in step 4 is the
-     gate - nothing reaches `NOTES.md` without passing it).
+     commit on a branch, push, and open a PR against `main` (the review
+     in step 4 is the content gate - nothing reaches `NOTES.md` without
+     passing it; the PR is a second, human-visible gate before it lands).
    - Either way, update each watched repo's `Last checked` value in
      `progress.md` to what was just gathered, so tomorrow's run starts
      from today, not from scratch.
