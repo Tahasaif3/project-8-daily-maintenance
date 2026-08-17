@@ -4,6 +4,24 @@ last_reviewed_entry_date: 2026-08-15
 
 ## Proposals made
 
+### 2026-08-17 review
+Checked `progress.md` for entries dated after 2026-08-15 (the last
+reviewed date). Found none - the `## Entries` section still ends at
+2026-08-15, meaning no daily-digest runs (quiet or otherwise) have
+logged since then. With zero new entries, there is nothing to group by
+failure signature and nothing that could have repeated.
+
+No rule change proposed. No new deletion proposed either: a deletion
+has to be justified by what the reviewed period didn't need, and this
+period contained no entries to check any rule against. The prior
+review (2026-08-15) already found every rule load-bearing over the
+period it covered; that finding stands unchanged since no new period
+has occurred to revisit it.
+
+`last_reviewed_entry_date` is left at 2026-08-15, since that is still
+the most recent entry actually reviewed - there is no later entry to
+advance it to.
+
 ### 2026-08-15 review
 Reviewed all progress.md entries (2026-08-09 through 2026-08-15, first
 review since state was `none`).
