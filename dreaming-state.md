@@ -4,6 +4,23 @@ last_reviewed_entry_date: 2026-08-15
 
 ## Proposals made
 
+### 2026-08-31 review
+Checked `progress.md` for entries dated after 2026-08-15 (the previous
+`last_reviewed_entry_date`): there are none. `progress.md` has not been
+committed to since 2026-08-15 (confirmed via `git log -- progress.md`),
+so no daily-digest runs have happened since the last review - nothing
+to gather, and therefore no repeated failure to find.
+
+`last_reviewed_entry_date` is left at 2026-08-15 since no entry after
+that date exists yet to advance it to.
+
+Rule deletion: none proposed. Re-checked the rules in daily-digest
+SKILL.md against the same 2026-08-09 through 2026-08-15 period covered
+by the last review (no newer period exists to check against); that
+review's conclusion still holds - every rule, including step 6's
+stop-without-writing safety net, was load-bearing across those entries.
+Nothing in this review changes that.
+
 ### 2026-08-15 review
 Reviewed all progress.md entries (2026-08-09 through 2026-08-15, first
 review since state was `none`).
