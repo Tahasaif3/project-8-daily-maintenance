@@ -4,6 +4,24 @@ Dated entries land here whenever the daily-digest run finds something
 new across the watched repos. Quiet days are logged in `progress.md`
 instead, not here - see that file for the full run history.
 
+## 2026-09-02
+
+**project-4-fix-loop**
+- 1 new commit on `main`: "Update README.md" (5528f97) - removes a trailing
+  period at the end of one line in the PR-history notes section. No
+  functional change.
+- PR #1 "Fix discount tier boundaries (off-by-one)" still open, unchanged
+  since 2026-08-14 (same head commit, no new comments).
+- No new issues.
+
+**project-5-codify-body**
+- Nothing new. `main` is unchanged since last check, no new PRs or issues.
+
+**project-6-doorbell-loop**
+- Nothing new on `main` since last check. PR #1 "Simplify next_in_line"
+  still open, unchanged since 2026-08-14 (same head commit, no new
+  comments). No new issues.
+
 ## 2026-08-15 (first run)
 
 **project-4-fix-loop**
