@@ -36,3 +36,21 @@ instead, not here - see that file for the full run history.
   ("restore bounds check") put it back. Net diff against `main` is now
   empty - no files changed. Not merged.
 - No issues.
+
+## 2026-09-03
+
+**project-4-fix-loop**
+- 1 new commit on `main` since last check: "Update README.md" (`5528f97`) -
+  a punctuation-only fix (removed a stray trailing period in the boundary-
+  testing notes section). No functional/code change.
+- PR #1 ("Fix discount tier boundaries (off-by-one)") still open, unchanged
+  since last check.
+- No issues.
+
+**project-5-codify-body**
+- Nothing new since last check. `main` is at the same commit as last time,
+  still no open PRs, no issues.
+
+**project-6-doorbell-loop**
+- Nothing new since last check. `main` is at the same commit as last time.
+  PR #1 ("Simplify next_in_line") still open, unchanged. No issues.
