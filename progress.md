@@ -6,7 +6,7 @@
 - Tahasaif3/project-6-doorbell-loop
 
 ## Last checked
-project-4-fix-loop: 43bf5a5c030f7ace8b44cf080f1599bc97d467b3
+project-4-fix-loop: 5528f97caf0d15b2999c4f6684ee1ad9b8fd05d4
 project-5-codify-body: 2654519729696726701012663a9cb5ae7c49c62d
 project-6-doorbell-loop: 4d4a2a25712d185c911768c3025384575f44c822
 
@@ -43,3 +43,16 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-09-11
+Same substantive facts as every run since 2026-08-16: project-4-fix-loop's
+one README wording commit (`5528f97`) is still the only new thing across
+all three repos; project-5-codify-body and project-6-doorbell-loop have
+nothing new; PR #1 in project-4-fix-loop and PR #1 in project-6-doorbell-loop
+are both unchanged since 2026-08-14. The actual finding this run: `main`
+has not moved since 2026-08-15, so PRs #3-#30 (24 daily-digest PRs, one
+per day since 2026-08-16) plus 4 `dreaming-loop` PRs (#4, #10, #18, #26)
+are all still open and unmerged. Every run since has been re-deriving the
+same "new" commit against the same stale spine. Flagged in NOTES.md and
+in this run's PR description - needs a human to merge/close the backlog
+before `Last checked` below can honestly advance.

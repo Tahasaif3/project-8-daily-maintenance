@@ -36,3 +36,35 @@ instead, not here - see that file for the full run history.
   ("restore bounds check") put it back. Net diff against `main` is now
   empty - no files changed. Not merged.
 - No issues.
+
+## 2026-09-11
+
+**Process note - read this first.** `main` in this repo has not moved
+since PR #2 merged on 2026-08-15. Every scheduled run since then
+(2026-08-16 through today) has opened a digest PR proposing content and
+none of them - PRs #3 through #30, 24 daily-digest PRs plus 4 more from
+the separate `dreaming-loop` skill (#4, #10, #18, #26) - has ever been
+merged. Because `main` never advances, each run re-checks out the same
+stale `progress.md` (`Last checked` still pinned to the 2026-08-15
+state) and "discovers" the same single project-4-fix-loop commit below
+as if it were new, every single day. This PR is functionally a duplicate
+of at least PR #30 (2026-09-10), which found and reported the identical
+facts. Recommend merging one of the open digest PRs (or this one) and
+closing the rest of the backlog as duplicates so the spine can actually
+advance; the `dreaming-loop` backlog likely needs the same treatment.
+
+**project-4-fix-loop**
+- 1 commit since the last state actually merged to `main` (`43bf5a5`):
+  "Update README.md" (`5528f97`, 2026-08-16) - removed a stray trailing
+  period at the end of the "No PR opened for this branch" sentence in the
+  off-by-one bug notes. Wording only, no code change.
+- PR #1 "Fix discount tier boundaries (off-by-one)" still open, unchanged
+  since 2026-08-14.
+- No issues.
+
+**project-5-codify-body**
+- Nothing new: no new commits, no PRs, no issues.
+
+**project-6-doorbell-loop**
+- Nothing new: no new commits. PR #1 "Simplify next_in_line" still open,
+  unchanged since 2026-08-14. No issues.
