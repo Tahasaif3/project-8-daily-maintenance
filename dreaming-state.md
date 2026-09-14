@@ -24,3 +24,21 @@ writing on unclean failure) was load-bearing across the reviewed
 period - including step 6's stop-without-writing path, which is the
 safety net for total gathering failure or a malformed spine and simply
 hasn't fired yet, not a rule that's unneeded.
+
+### 2026-09-14 review
+Checked `progress.md`'s `## Entries` section for anything dated after
+2026-08-15. Found nothing: no new dated entries have been appended
+since the 2026-08-15 first-run entry, and no commit has touched
+`progress.md` since it was written (confirmed against the repo's commit
+history). The daily-digest loop has not logged a run in this window.
+
+No repeated failure to report - there is no new data to find a repeat
+in. No rule change proposed against `.claude/skills/daily-digest/SKILL.md`
+this period.
+
+Rule deletion: none proposed. There is no new evidence this period to
+judge any rule against, and the 2026-08-15 review already found every
+current rule load-bearing; nothing since then changes that assessment.
+
+`last_reviewed_entry_date` left at 2026-08-15 (unchanged) - there is no
+newer entry to advance it to.
