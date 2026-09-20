@@ -4,6 +4,37 @@ Dated entries land here whenever the daily-digest run finds something
 new across the watched repos. Quiet days are logged in `progress.md`
 instead, not here - see that file for the full run history.
 
+## 2026-09-20
+
+**project-4-fix-loop**
+- One new commit since the recorded `Last checked` point: `5528f97`
+  ("Update README.md", 2026-08-16) - removes a stray trailing period
+  from the `fix/discount-boundaries-bad` description line. Wording only,
+  no functional change.
+- PR #1 ("Fix discount tier boundaries (off-by-one)") is unchanged: still
+  open, still unmerged, last updated 2026-08-14.
+- No issues.
+
+**project-5-codify-body**
+- Nothing new: no commits, no PRs, no issues since last check.
+
+**project-6-doorbell-loop**
+- No new commits.
+- PR #1 ("Simplify next_in_line") is unchanged: still open, still
+  unmerged, last updated 2026-08-14.
+- No issues.
+
+**Backlog note (repeated from PR #31, 2026-09-11):** `main` in this
+repo (project-8-daily-maintenance) has not moved since PR #2 merged on
+2026-08-15. Every scheduled run since 2026-08-16 has opened a digest or
+dreaming-loop PR (#3 through #39 - 37 of them) and none have been
+merged or closed, so `progress.md`'s `Last checked` pointer has stayed
+pinned to 2026-08-15 and every run since has re-derived the same single
+project-4-fix-loop commit as "new." This run's PR (#40) is another
+near-duplicate for the same reason. The fix is to merge one digest PR
+(this one or an earlier equivalent) and close the rest of the backlog as
+duplicates so the spine can advance.
+
 ## 2026-08-15 (first run)
 
 **project-4-fix-loop**
