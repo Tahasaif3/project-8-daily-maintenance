@@ -16,6 +16,21 @@ over many unattended runs, not a one-off demo.
    its `Last checked` value (a commit SHA, PR/issue number high-water
    mark, or `none` on the very first run).
 
+   Also check this repo's own open pull requests (e.g. `gh pr list
+   --state open`) for daily-digest or dreaming-loop runs still unmerged
+   from previous days. If a backlog exists, say so explicitly in
+   today's entry, with the count - `progress.md`'s `Last checked`
+   values only move when a PR against `main` actually merges, so an
+   unmerged backlog means today's "new" activity may just be the same
+   diff a prior run already reported. (Seen since 2026-08-16: PRs
+   #3-#39 opened, none merged or closed, first flagged in PR #31 on
+   2026-09-11 - "every run since has re-derived the same single
+   project-4-fix-loop commit as 'new' and opened a near-duplicate PR" -
+   and still true, grown to 37 open PRs, when PR #40 re-reported the
+   identical diagnosis on 2026-09-20. Flagging it explicitly every run
+   makes it a required check rather than something that depends on the
+   acting run happening to notice.)
+
 2. **Gather, per repo.** Using `gh api` / `gh pr list` / `gh issue list`
    / `git log`, find anything new since the last-checked point: commits,
    opened or merged PRs, opened or closed issues. If a repo shows
