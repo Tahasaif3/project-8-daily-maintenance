@@ -24,3 +24,21 @@ writing on unclean failure) was load-bearing across the reviewed
 period - including step 6's stop-without-writing path, which is the
 safety net for total gathering failure or a malformed spine and simply
 hasn't fired yet, not a rule that's unneeded.
+
+### 2026-09-28 review
+Checked `progress.md` for entries dated after `last_reviewed_entry_date`
+(2026-08-15). Found none - the most recent entry in `progress.md` is
+still 2026-08-15, the same entry the last review already covered. No
+daily-digest runs have logged a new dated entry since then, so there is
+nothing to group by failure signature and no repeat (or one-off) to
+evaluate this period. `last_reviewed_entry_date` stays 2026-08-15
+since no later entry exists to advance it to.
+
+No repeated failure -> no SKILL.md fix proposed.
+
+Rule deletion: re-reviewed the current `daily-digest/SKILL.md` rules
+(read spine, gather with the step-2 retry-once-then-skip added by the
+prior review's PR, draft, check draft, write quiet/new, stop-without-
+writing on unclean failure). With no new entries to test them against,
+there is no new evidence that any rule went unused - the prior review's
+conclusion stands unchanged. No deletion proposed.
