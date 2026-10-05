@@ -24,3 +24,19 @@ writing on unclean failure) was load-bearing across the reviewed
 period - including step 6's stop-without-writing path, which is the
 safety net for total gathering failure or a malformed spine and simply
 hasn't fired yet, not a rule that's unneeded.
+
+### 2026-10-05 review
+No progress.md entries are dated after `last_reviewed_entry_date`
+(2026-08-15); the latest entry is still 2026-08-15, which the previous
+review already covered. Nothing new to gather, so nothing repeated this
+period.
+
+No change proposed to daily-digest SKILL.md. The 60s retry added after
+the 2026-08-15 review (step 2) has not yet been exercised by any new run,
+so there is no evidence either way on it. No rule deletion proposed: with
+no new entries there is no evidence that any rule went unused.
+
+Note: no daily-digest entries were logged between 2026-08-16 and
+2026-10-05 - the daily run may have stopped firing.
+
+`last_reviewed_entry_date` unchanged (2026-08-15).
