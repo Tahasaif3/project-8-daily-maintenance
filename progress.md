@@ -43,3 +43,19 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-10-05
+Run blocked in step 2, nothing written to NOTES.md and `Last checked`
+left unchanged. Commit history for all three repos was readable (shallow
+clones via the read-only git proxy), but PR and issue data was not:
+`gh api` for each watched repo returned HTTP 403 "GitHub access to this
+repository is not enabled for this session" (an access-scope error, not
+a rate limit, so the 60s retry rule does not apply). Fixing it needs the
+three repos attached to the routine's environment with push-level
+credentials via `add_repo`; I did not widen write access on my own.
+What the commit history alone showed since the last-checked SHAs:
+- project-4-fix-loop: 1 new commit on `main`, 5528f97 "Update README.md"
+  (2026-08-16), a one-line README edit dropping a trailing period.
+- project-5-codify-body: no new commits (still 2654519).
+- project-6-doorbell-loop: no new commits (still 4d4a2a2).
+Unknown: any PR or issue changes (e.g. PR #1 in project-4 and project-6).
