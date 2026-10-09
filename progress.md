@@ -43,3 +43,16 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-10-09
+Run blocked partway; NOTES.md intentionally not updated. `gh api` for all
+three watched repos returned HTTP 403 "GitHub access to this repository is
+not enabled for this session" (an access problem, not the rate-limit seen
+in August; the retry rule does not apply). Read-only `git clone` worked, so
+commits were verified, but PR and issue state could not be checked
+(would need `add_repo` with `access: "push"` for each watched repo, which
+this run did not grant itself). Commit findings so far: project-4-fix-loop
+has 1 new commit since last check (5528f97, 2026-08-16, "Update README.md":
+removes a trailing period in one README line); project-5-codify-body and
+project-6-doorbell-loop have no new commits. `Last checked` SHAs left
+unchanged so the next fully-working run re-gathers everything.
