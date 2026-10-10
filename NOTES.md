@@ -36,3 +36,17 @@ instead, not here - see that file for the full run history.
   ("restore bounds check") put it back. Net diff against `main` is now
   empty - no files changed. Not merged.
 - No issues.
+
+## 2026-10-10
+
+**project-4-fix-loop**
+- 1 new commit on `main`: "Update README.md" (5528f97, 2026-08-16) - a
+  one-character README edit that drops the trailing period after "No PR
+  opened for this branch".
+- PR #1 still open and unchanged. No issues.
+
+**project-5-codify-body**
+- Nothing new. HEAD still 2654519; no PRs or issues.
+
+**project-6-doorbell-loop**
+- Nothing new. HEAD still 4d4a2a2; PR #1 still open, no issues.
