@@ -6,7 +6,7 @@
 - Tahasaif3/project-6-doorbell-loop
 
 ## Last checked
-project-4-fix-loop: 43bf5a5c030f7ace8b44cf080f1599bc97d467b3
+project-4-fix-loop: 5528f97caf0d15b2999c4f6684ee1ad9b8fd05d4
 project-5-codify-body: 2654519729696726701012663a9cb5ae7c49c62d
 project-6-doorbell-loop: 4d4a2a25712d185c911768c3025384575f44c822
 
@@ -43,3 +43,18 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-10-11
+Checked via `git clone`/`git log --all` on the three repos (public, read-only
+proxy access). Commits and branches verified; PRs and issues could NOT be
+checked this run: `gh api` returned 403 "GitHub access to this repository is
+not enabled for this session" for all three repos (an access-scope block, not
+a rate limit - the retry rule does not apply). Sessions only had read-only git
+access to the watched repos, so PR/issue state is unchanged-by-assumption and
+unverified; the PR #1 status in the 2026-08-15 digest was not re-confirmed.
+- project-4-fix-loop: 1 new commit on `main` (5528f97, "Update README.md",
+  2026-08-16) - removes a trailing period in README.md. Last checked advanced.
+- project-5-codify-body: nothing new (still 2654519).
+- project-6-doorbell-loop: nothing new (still 4d4a2a2).
+Digest appended to NOTES.md. Note: no runs logged between 2026-08-15 and
+today.
