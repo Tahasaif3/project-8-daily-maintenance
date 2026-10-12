@@ -43,3 +43,21 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-10-12
+Run blocked - nothing written to NOTES.md, `Last checked` left unchanged.
+The session only had git read access to the three watched repos (public
+anonymous clone via the proxy); `gh api` for PRs/issues returned 403
+"GitHub access to this repository is not enabled for this session" for
+all three. Commits and PR head refs could be read via git, but PR
+open/merged/closed state and issues could not be verified, so no digest
+was drafted (per skill step 6: honest gap over guessing).
+Unverified-for-digest observations from git alone, for the next run:
+- project-4-fix-loop: `main` moved from 43bf5a5 to 5528f97 ("Update README.md",
+  2026-08-16, removes a trailing period in README). PR #1 head ref still
+  c89bfee..., not an ancestor of `main`.
+- project-5-codify-body: `main` still 2654519, no new commits.
+- project-6-doorbell-loop: `main` still 4d4a2a2; PR #1 head ref still
+  3735e33, not an ancestor of `main`.
+Fix: grant the routine's environment GitHub API access (push-level attach)
+to the three watched repos, or the next run will block the same way.
