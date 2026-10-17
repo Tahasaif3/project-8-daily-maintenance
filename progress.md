@@ -43,3 +43,17 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-10-17
+Run blocked - nothing written to NOTES.md, `Last checked` left unchanged.
+The scheduled session's `gh` token (GH_TOKEN) is invalid, and the three
+watched repos are not attached to the session, so `gh api` / `gh pr list` /
+`gh issue list` return 403 "GitHub access to this repository is not
+enabled for this session" (a different cause from the earlier rate-limit
+403s). Anonymous `git` reads work, so partial data was seen: 
+project-4-fix-loop `main` moved from 43bf5a5 to 5528f97 (one commit,
+"Update README.md", a one-character change dropping a trailing period);
+project-5-codify-body and project-6-doorbell-loop `main` unchanged.
+PR and issue activity could not be checked for any repo, so the digest
+could not be verified against raw data and was not drafted. Fix: attach the
+three repos with push access (or provide a valid token) for the routine.
