@@ -6,7 +6,7 @@
 - Tahasaif3/project-6-doorbell-loop
 
 ## Last checked
-project-4-fix-loop: 43bf5a5c030f7ace8b44cf080f1599bc97d467b3
+project-4-fix-loop: 5528f97caf0d15b2999c4f6684ee1ad9b8fd05d4
 project-5-codify-body: 2654519729696726701012663a9cb5ae7c49c62d
 project-6-doorbell-loop: 4d4a2a25712d185c911768c3025384575f44c822
 
@@ -43,3 +43,15 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-10-18
+Checked via `git clone`/`ls-remote` (read-only; the `gh api` REST calls
+returned 403 "GitHub access to this repository is not enabled for this
+session", a different cause than the earlier rate-limit 403s, so
+the retry rule did not apply). New: project-4-fix-loop has 1 new commit on
+`main` (5528f97 "Update README.md", 2026-08-16, drops a trailing period).
+project-5-codify-body and project-6-doorbell-loop: no new commits or
+branches. Open/merged state of PR #1 in project-4 and project-6 could not
+be re-checked (PR/issue API unavailable); PR head refs are unchanged
+(project-4 c89bfee, project-6 3735e33). Issues could not be listed either.
+Digest appended to NOTES.md via PR.
