@@ -36,3 +36,21 @@ instead, not here - see that file for the full run history.
   ("restore bounds check") put it back. Net diff against `main` is now
   empty - no files changed. Not merged.
 - No issues.
+
+## 2026-10-21
+
+**project-4-fix-loop**
+- 1 new commit on `main`: "Update README.md" (5528f97, 2026-08-16) - a
+  one-line README edit that drops the trailing period after "No PR opened
+  for this branch". No code change.
+- PR #1 head unchanged (c89bfee); its `refs/pull/1/merge` ref still exists,
+  so it appears still open/unmerged. Not confirmed via API.
+
+**project-5-codify-body**
+- Nothing new (`main` still 2654519).
+
+**project-6-doorbell-loop**
+- Nothing new (`main` still 4d4a2a2). PR #1 head unchanged (3735e33).
+
+_Caveat: checked via git refs only; issues and exact PR state were not
+checkable through the GitHub API this run._
