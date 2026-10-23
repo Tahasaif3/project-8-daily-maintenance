@@ -6,7 +6,7 @@
 - Tahasaif3/project-6-doorbell-loop
 
 ## Last checked
-project-4-fix-loop: 43bf5a5c030f7ace8b44cf080f1599bc97d467b3
+project-4-fix-loop: 5528f97caf0d15b2999c4f6684ee1ad9b8fd05d4
 project-5-codify-body: 2654519729696726701012663a9cb5ae7c49c62d
 project-6-doorbell-loop: 4d4a2a25712d185c911768c3025384575f44c822
 
@@ -43,3 +43,17 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-10-23
+Something new in one repo. project-4-fix-loop gained 1 commit (5528f97,
+"Update README.md", a one-character README edit); its `Last checked` is
+advanced to that SHA. project-5-codify-body and project-6-doorbell-loop
+unchanged (their `Last checked` SHAs are still the branch heads). Open PRs
+#1 in project-4 and project-6 are unchanged and still unmerged; no issues
+anywhere. Digest added to NOTES.md via PR. This is the first entry since
+2026-08-15, so the log has a gap between those dates. Setup notes: the
+watched repos had to be attached to the session first, which cost two
+403 "access not enabled" errors that were not rate limits. `gh pr list` and
+`gh issue list` also fail with a GraphQL 403 here, so this run used
+`gh api repos/.../pulls` and `.../issues` instead. No 403 rate-limit
+errors occurred on project-5-codify-body.
