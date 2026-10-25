@@ -36,3 +36,23 @@ instead, not here - see that file for the full run history.
   ("restore bounds check") put it back. Net diff against `main` is now
   empty - no files changed. Not merged.
 - No issues.
+
+## 2026-10-25
+
+**project-4-fix-loop**
+- `main` was replaced. It is now one parentless commit, 5528f97 "Update README.md"
+  (Taha Saif, 2026-08-16). The previous tip, 43bf5a5 "record PASS/FAIL results
+  in README", is no longer on any branch.
+- The new `main` matches 43bf5a5 except README.md's last line lost its trailing
+  period. `cart_total.py` on `main` still has the `>` tier bug.
+- Branches `fix/discount-boundaries` (c89bfee) and `fix/discount-boundaries-bad`
+  (e1c1a3a) are unchanged, and PR #1's head is still c89bfee. PR state
+  (open/merged) not checked, see `progress.md`.
+
+**project-5-codify-body**
+- Nothing new. `main` is still 2654519 and there are no other branches.
+
+**project-6-doorbell-loop**
+- Nothing new. `main` is still 4d4a2a2. `bug/remove-bounds-check` and PR #1's
+  head are still 3735e33, with the same README-only diff against `main`.
+  PR state not checked.
