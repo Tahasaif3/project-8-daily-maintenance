@@ -43,3 +43,16 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-10-28
+Run blocked at step 2; nothing written to NOTES.md and `Last checked`
+left unchanged. The session had no GitHub API access to the three watched
+repos (`gh api` / `gh pr list` returned 403 "GitHub access to this
+repository is not enabled for this session"; this is an access block, not
+the rate-limit 403 seen before). Only anonymous `git` reads worked, so
+commits and branches were observable but PR and issue state was not.
+What git did show, unverified against PR/issue data: project-4-fix-loop
+has one commit past the last-checked SHA (5528f97, 2026-08-16 "Update
+README.md", a one-line trailing-period edit); project-5-codify-body and
+project-6-doorbell-loop heads match their last-checked SHAs. Needs the
+routine's environment to be given API access to the watched repos.
