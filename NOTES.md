@@ -36,3 +36,25 @@ instead, not here - see that file for the full run history.
   ("restore bounds check") put it back. Net diff against `main` is now
   empty - no files changed. Not merged.
 - No issues.
+
+## 2026-10-31
+
+**project-4-fix-loop**
+- 1 new commit on `main`: "Update README.md" (5528f97, 2026-08-16). One-line
+  edit to the README's results section: removes the trailing period from
+  "No PR opened for this branch." No code changes.
+- Branches `fix/discount-boundaries` and `fix/discount-boundaries-bad` exist
+  with one commit each (both dated 2026-08-15, same as in the first-run
+  digest); nothing new on them.
+
+**project-5-codify-body**
+- No new commits on `main` (still 2654519).
+
+**project-6-doorbell-loop**
+- No new commits on `main` (still 4d4a2a2); branch `bug/remove-bounds-check`
+  unchanged.
+
+**Not checked:** PR and issue state for all three repos. The GitHub API was
+unavailable for these repos in this run (access error, not a rate limit), so
+whether PR #1 in project-4 or project-6 has merged, closed, or gained comments
+is unverified. This digest covers commits and branches only.
