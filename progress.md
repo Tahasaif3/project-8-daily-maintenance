@@ -6,7 +6,7 @@
 - Tahasaif3/project-6-doorbell-loop
 
 ## Last checked
-project-4-fix-loop: 43bf5a5c030f7ace8b44cf080f1599bc97d467b3
+project-4-fix-loop: 5528f97caf0d15b2999c4f6684ee1ad9b8fd05d4
 project-5-codify-body: 2654519729696726701012663a9cb5ae7c49c62d
 project-6-doorbell-loop: 4d4a2a25712d185c911768c3025384575f44c822
 
@@ -43,3 +43,15 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-10-31
+Checked commits and branches for all three repos via `git clone` / `git log`.
+The `gh api` calls returned HTTP 403 "GitHub access to this repository is not
+enabled for this session" - an access error (watched repos not attached to the
+routine's session), not the rate-limit seen in August. The repos are public, so
+git reads worked; PR and issue state could NOT be checked this run (API is
+unavailable for unattached repos). Digest therefore covers commits and branches
+only. Result: project-4-fix-loop has 1 new commit on `main` (5528f97, README
+wording tweak); project-5-codify-body and project-6-doorbell-loop have no new
+commits. `Last checked` updated for project-4 only. Fix needed: attach the
+three watched repos to the routine's environment with push/API access.
