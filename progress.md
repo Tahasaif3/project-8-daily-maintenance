@@ -43,3 +43,19 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-11-01
+Run blocked, nothing written to NOTES.md and `Last checked` left unchanged.
+Commit history was gathered via `git clone`/`git log` for all three repos
+(project-4-fix-loop has 1 commit since last check: 5528f97 "Update README.md",
+a one-character trailing-period removal; project-5-codify-body and
+project-6-doorbell-loop have no new commits). But PR and issue state could
+not be read: `gh pr list`/`gh issue list` fail (GraphQL blocked in this
+environment), and the REST API (`gh api repos/.../pulls`, `.../issues`)
+returns 403 "GitHub access to this repository is not enabled for this
+session" for all three watched repos. Fixing it needs the three repos
+attached to the routine's environment with API access (add_repo with push
+credentials), which I did not grant on my own. Without PR/issue data the
+digest cannot be verified against the raw data, so per the skill, no digest
+was written. Next run (or a manual one with access) will pick up from the
+same `Last checked` SHAs.
