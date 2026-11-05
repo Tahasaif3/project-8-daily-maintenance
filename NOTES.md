@@ -36,3 +36,26 @@ instead, not here - see that file for the full run history.
   ("restore bounds check") put it back. Net diff against `main` is now
   empty - no files changed. Not merged.
 - No issues.
+
+## 2026-11-05
+
+**project-4-fix-loop**
+- 1 new commit on `main`: `5528f97` "Update README.md" (2026-08-16, Taha
+  Saif). One-line README change: removes the trailing period from the last
+  line of the `fix/discount-boundaries-bad` note ("No PR opened for this
+  branch"). Cosmetic only.
+- Branches `fix/discount-boundaries` and `fix/discount-boundaries-bad`
+  still exist; `refs/pull/1/head` is `c89bfee` (the `fix/discount-boundaries`
+  tip).
+
+**project-5-codify-body**
+- Nothing new. `main` still at `2654519`.
+
+**project-6-doorbell-loop**
+- Nothing new. `main` still at `4d4a2a2`; `bug/remove-bounds-check` /
+  `refs/pull/1/head` still at `3735e33`.
+
+Caveat: the `gh` API was not usable this run (403 "GitHub access ... not
+enabled for this session", not a rate limit), so this digest comes from
+`git clone` / `git ls-remote` only. PR open/merged state, comments and
+issues could not be checked.
