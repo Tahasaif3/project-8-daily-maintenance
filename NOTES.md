@@ -36,3 +36,21 @@ instead, not here - see that file for the full run history.
   ("restore bounds check") put it back. Net diff against `main` is now
   empty - no files changed. Not merged.
 - No issues.
+
+## 2026-11-07
+
+**project-4-fix-loop**
+- 1 new commit on `main`: 5528f97 "Update README.md" (Taha Saif, 2026-08-16).
+  Cosmetic only: removes the trailing period from the last README line
+  ("No PR opened for this branch"). No code changed.
+- The discount-boundary fix (`c89bfee`, head of PR #1) is still not in
+  `main`; the PR branch is unchanged since last check. (PR open/merged
+  state could not be read directly - no GitHub API access to this repo
+  from this run - this is inferred from git refs only.)
+- No issue data available for the same reason.
+
+**project-5-codify-body**
+- Nothing new. `main` is still 2654519.
+
+**project-6-doorbell-loop**
+- Nothing new. `main` is still 4d4a2a2; PR #1 branch still at 3735e33.
