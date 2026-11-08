@@ -6,7 +6,7 @@
 - Tahasaif3/project-6-doorbell-loop
 
 ## Last checked
-project-4-fix-loop: 43bf5a5c030f7ace8b44cf080f1599bc97d467b3
+project-4-fix-loop: 5528f97caf0d15b2999c4f6684ee1ad9b8fd05d4
 project-5-codify-body: 2654519729696726701012663a9cb5ae7c49c62d
 project-6-doorbell-loop: 4d4a2a25712d185c911768c3025384575f44c822
 
@@ -43,3 +43,15 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-11-08
+Ran from a cloud session with git-only read access to the three watched
+repos (`gh api` and `gh pr list` were refused: "GitHub access to this
+repository is not enabled", GraphQL unavailable), so gathering used
+`git log` and `git ls-remote` instead. PR/issue open-closed state and new
+issues could NOT be checked - noted in NOTES.md. Findings:
+project-4-fix-loop has 1 new commit (5528f97, trivial README punctuation
+edit); project-5-codify-body and project-6-doorbell-loop unchanged
+(PR #1 refs unchanged in both project-4 and project-6). Note: the last run
+before this was 2026-08-15, so ~85 days of runs are missing from the log.
+
