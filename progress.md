@@ -43,3 +43,21 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-11-10
+BLOCKED - run stopped without writing a digest (skill step 6). Git history
+for all three repos was readable (public clones), but PR and issue data was
+not: `gh api repos/Tahasaif3/<repo>/pulls|issues` returned HTTP 403 "GitHub
+access to this repository is not enabled for this session" for
+project-4-fix-loop, project-5-codify-body and project-6-doorbell-loop
+(`gh pr list` also 403s: GraphQL unavailable). Only read-only git access was
+available; API access would need these repos attached with push credentials,
+which was not done. Without PR/issue data the draft cannot be verified, so
+NOTES.md and the `Last checked` SHAs were left unchanged.
+What git alone showed (unverified against PR/issue state):
+- project-4-fix-loop: 1 new commit on main, 5528f97 "Update README.md"
+  (2026-08-16, one-line README edit). Branches fix/discount-boundaries and
+  fix/discount-boundaries-bad exist.
+- project-5-codify-body: no new commits since 2654519.
+- project-6-doorbell-loop: no new commits since 4d4a2a2; branch
+  bug/remove-bounds-check exists.
