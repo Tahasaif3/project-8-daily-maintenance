@@ -6,7 +6,7 @@
 - Tahasaif3/project-6-doorbell-loop
 
 ## Last checked
-project-4-fix-loop: 43bf5a5c030f7ace8b44cf080f1599bc97d467b3
+project-4-fix-loop: 5528f97caf0d15b2999c4f6684ee1ad9b8fd05d4
 project-5-codify-body: 2654519729696726701012663a9cb5ae7c49c62d
 project-6-doorbell-loop: 4d4a2a25712d185c911768c3025384575f44c822
 
@@ -43,3 +43,14 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-11-15
+First run since 2026-08-15 (no entries in between). One new item:
+project-4-fix-loop got 1 commit (`5528f97`, a one-line README punctuation
+tweak); its PR #1 is still open and unchanged. project-5-codify-body and
+project-6-doorbell-loop: nothing new (project-6 PR #1 still open,
+unchanged). No issues in any repo. Digest written to NOTES.md.
+Operational note: `gh pr list` / `gh issue list` failed with HTTP 403
+"GraphQL is not available from Claude Code sessions" (not a rate limit);
+gathered PRs/issues via `gh api repos/.../pulls` and `.../issues` (REST)
+instead, which worked for all three repos.
