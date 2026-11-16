@@ -14,7 +14,10 @@ over many unattended runs, not a one-off demo.
 
 1. **Read the spine.** Open `progress.md`. For each watched repo, read
    its `Last checked` value (a commit SHA, PR/issue number high-water
-   mark, or `none` on the very first run).
+   mark, or `none` on the very first run). If earlier runs' digest PRs
+   are still open and unmerged, `main`'s spine is stale: read `Last
+   checked` from the newest unmerged `daily-digest/<date>` branch
+   instead, and say in today's entry how many digest PRs are waiting.
 
 2. **Gather, per repo.** Using `gh api` / `gh pr list` / `gh issue list`
    / `git log`, find anything new since the last-checked point: commits,
@@ -22,16 +25,12 @@ over many unattended runs, not a one-off demo.
    `none`, this is its first check - gather everything currently there,
    not just "recent" activity.
 
-   If a `gh api` call returns a 403 rate-limit error while gathering a
-   repo's activity, wait about 60 seconds and retry that call once
-   before giving up. If it still fails, skip that repo for this run
-   only, note the skip and its cause in today's entry, and continue
-   gathering the remaining repos. (Seen 3 times for
-   project-5-codify-body - 2026-08-10, 2026-08-12, 2026-08-14 - always
-   a `gh api` 403 rate-limit right after listing commits, always
-   handled by skipping the repo outright with no retry attempted. A
-   single retry after a short wait is the smallest change likely to
-   get past a transient rate limit before falling back to a skip.)
+   `gh pr list` / `gh issue list` go through GraphQL, which this
+   environment blocks with a 403; use the REST endpoints
+   (`gh api repos/<repo>/pulls?state=all`, `.../issues?state=all`)
+   instead. A 403 "GitHub access to this repository is not enabled for
+   this session" means the repo is not attached: attach it read-only
+   (`add_repo`) and retry once; if that fails, follow step 6.
 
 3. **Draft (implementer).** Write a short digest: what changed, per
    repo, in plain sentences. If a repo had nothing new, say so plainly
@@ -49,8 +48,8 @@ over many unattended runs, not a one-off demo.
      to `progress.md`. Do not touch `NOTES.md` - a commit for "nothing
      happened" is noise.
    - If something new was found: append the dated digest to `NOTES.md`,
-     commit on a branch, push, and open a PR against `main` (the review
-     in step 4 is the content gate - nothing reaches `NOTES.md` without
+     commit on a branch named `daily-digest/<date>`, push, and open a PR
+     against `main` (the review in step 4 is the content gate - nothing reaches `NOTES.md` without
      passing it; the PR is a second, human-visible gate before it lands).
    - Either way, update each watched repo's `Last checked` value in
      `progress.md` to what was just gathered, so tomorrow's run starts
