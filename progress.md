@@ -6,7 +6,7 @@
 - Tahasaif3/project-6-doorbell-loop
 
 ## Last checked
-project-4-fix-loop: 43bf5a5c030f7ace8b44cf080f1599bc97d467b3
+project-4-fix-loop: 5528f97caf0d15b2999c4f6684ee1ad9b8fd05d4
 project-5-codify-body: 2654519729696726701012663a9cb5ae7c49c62d
 project-6-doorbell-loop: 4d4a2a25712d185c911768c3025384575f44c822
 
@@ -43,3 +43,20 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-11-17
+All three repos checked cleanly (git fetch + REST `gh api`; note: `gh pr list`
+/ `gh issue list` now fail with a 403 because GraphQL is blocked in this
+environment, so PRs and issues were read via `gh api repos/.../pulls` and
+`.../issues` instead). `main` has no entries after 2026-08-15, but that is
+not a gap in runs: daily-digest/dreaming-loop PRs #69-#97 are all still open
+and unmerged, so `main`'s spine is stale and each run re-reports the same
+activity (5528f97 below was also reported in PR #94).
+- project-4-fix-loop: 1 new commit on `main` (5528f97, 2026-08-16,
+  "Update README.md", made in the GitHub web UI) - removes a trailing period from one README line.
+  PR #1 still open and unchanged. No issues.
+- project-5-codify-body: nothing new (still 2654519). No PRs, no issues.
+- project-6-doorbell-loop: nothing new (still 4d4a2a2). PR #1 still open
+  and unchanged, net diff against `main` still empty. No issues.
+Digest added to NOTES.md. `Last checked` updated for project-4-fix-loop;
+the other two SHAs are unchanged.
