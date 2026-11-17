@@ -48,8 +48,10 @@ Full digest written to NOTES.md.
 All three repos checked cleanly (git fetch + REST `gh api`; note: `gh pr list`
 / `gh issue list` now fail with a 403 because GraphQL is blocked in this
 environment, so PRs and issues were read via `gh api repos/.../pulls` and
-`.../issues` instead). First run logged since 2026-08-15 - no entries for
-the ~3 months in between.
+`.../issues` instead). `main` has no entries after 2026-08-15, but that is
+not a gap in runs: daily-digest/dreaming-loop PRs #69-#97 are all still open
+and unmerged, so `main`'s spine is stale and each run re-reports the same
+activity (5528f97 below was also reported in PR #94).
 - project-4-fix-loop: 1 new commit on `main` (5528f97, 2026-08-16,
   "Update README.md", made in the GitHub web UI) - removes a trailing period from one README line.
   PR #1 still open and unchanged. No issues.
