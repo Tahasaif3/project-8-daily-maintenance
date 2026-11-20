@@ -52,5 +52,8 @@ project-4-fix-loop: 1 new commit on `main` (`5528f97`, README.md
 one-character edit, dated 2026-08-16). PR #1 unchanged (open).
 project-5-codify-body: nothing new. project-6-doorbell-loop: nothing new,
 PR #1 unchanged (open). Digest added to NOTES.md.
-Gap note: no entries exist between 2026-08-15 and today, so the daily
-routine does not appear to have landed any runs in that period.
+Stale-spine note: daily runs have been happening, but their PRs are not
+being merged - 99 PRs are open in this repo (e.g. #98 on 2026-11-17, #99
+on 2026-11-18, #100 on 2026-11-19 all report this same project-4 commit).
+Because `Last checked` on `main` never advances, every run re-reports
+`5528f97` as new. Merging one digest PR (or this one) clears it.
