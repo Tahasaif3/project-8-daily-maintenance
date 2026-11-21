@@ -45,7 +45,10 @@ had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
 
 ### 2026-11-21
-First run since 2026-08-15 (no entries logged in between). One new
+No entries on `main` since 2026-08-15, but this is not a gap in runs:
+~100 earlier daily-digest/dreaming-loop PRs (#3-#101) are open and
+unmerged, so the spine on `main` never advances and each run re-reports
+the same change. Merge or close them to unstick the loop. One new
 commit in project-4-fix-loop (`5528f97`, 2026-08-16, cosmetic README
 edit); PR #1 there still open and unchanged. project-5-codify-body and
 project-6-doorbell-loop: nothing new. Digest written to NOTES.md.
