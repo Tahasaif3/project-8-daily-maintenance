@@ -6,7 +6,7 @@
 - Tahasaif3/project-6-doorbell-loop
 
 ## Last checked
-project-4-fix-loop: 43bf5a5c030f7ace8b44cf080f1599bc97d467b3
+project-4-fix-loop: 5528f97caf0d15b2999c4f6684ee1ad9b8fd05d4
 project-5-codify-body: 2654519729696726701012663a9cb5ae7c49c62d
 project-6-doorbell-loop: 4d4a2a25712d185c911768c3025384575f44c822
 
@@ -43,3 +43,15 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-11-21
+No entries on `main` since 2026-08-15, but this is not a gap in runs:
+~100 earlier daily-digest/dreaming-loop PRs (#3-#101) are open and
+unmerged, so the spine on `main` never advances and each run re-reports
+the same change. Merge or close them to unstick the loop. One new
+commit in project-4-fix-loop (`5528f97`, 2026-08-16, cosmetic README
+edit); PR #1 there still open and unchanged. project-5-codify-body and
+project-6-doorbell-loop: nothing new. Digest written to NOTES.md.
+`gh pr list`/`gh issue list` failed (GraphQL blocked in this
+environment, HTTP 403 - not a rate limit); used `gh api` REST endpoints
+instead, which worked for all three repos.
