@@ -18,6 +18,11 @@ again next time it happens.
 
 2. **Gather.** Read every entry in `progress.md`'s `## Entries` section
    dated after `last_reviewed_entry_date` (or all of them if `none`).
+   Daily-digest entries only reach `main` when a human merges their PR,
+   so also read the `progress.md` entries on unmerged digest branches
+   (`git ls-remote origin`, branches containing `digest`), and report
+   the unmerged backlog in the PR. "No new entries on `main`" is not the
+   same as "no runs happened".
 
 3. **Look for repeats, not one-offs.** Group entries by failure
    signature (same error, same point in the run, same repo). Anything

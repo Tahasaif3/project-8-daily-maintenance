@@ -14,24 +14,23 @@ over many unattended runs, not a one-off demo.
 
 1. **Read the spine.** Open `progress.md`. For each watched repo, read
    its `Last checked` value (a commit SHA, PR/issue number high-water
-   mark, or `none` on the very first run).
+   mark, or `none` on the very first run). If earlier runs' digest PRs
+   are still open and unmerged, `main`'s spine is stale: read `Last
+   checked` from the newest unmerged `claude/daily-digest-<date>` branch
+   instead, and say in today's entry how many digest PRs are waiting.
 
-2. **Gather, per repo.** Using `gh api` / `gh pr list` / `gh issue list`
-   / `git log`, find anything new since the last-checked point: commits,
-   opened or merged PRs, opened or closed issues. If a repo shows
-   `none`, this is its first check - gather everything currently there,
-   not just "recent" activity.
+2. **Gather, per repo.** Using `git log` and REST `gh api`, find
+   anything new since the last-checked point: commits, opened or
+   merged PRs, opened or closed issues. If a repo shows `none`, this is
+   its first check - gather everything currently there, not just
+   "recent" activity.
 
-   If a `gh api` call returns a 403 rate-limit error while gathering a
-   repo's activity, wait about 60 seconds and retry that call once
-   before giving up. If it still fails, skip that repo for this run
-   only, note the skip and its cause in today's entry, and continue
-   gathering the remaining repos. (Seen 3 times for
-   project-5-codify-body - 2026-08-10, 2026-08-12, 2026-08-14 - always
-   a `gh api` 403 rate-limit right after listing commits, always
-   handled by skipping the repo outright with no retry attempted. A
-   single retry after a short wait is the smallest change likely to
-   get past a transient rate limit before falling back to a skip.)
+   `gh pr list` / `gh issue list` go through GraphQL, which this
+   environment blocks with a 403; use the REST endpoints
+   (`gh api repos/<repo>/pulls?state=all`, `.../issues?state=all`)
+   instead. A 403 "GitHub access to this repository is not enabled for
+   this session" means the repo is not attached: attach it read-only
+   (`add_repo`) and retry once; if that fails, follow step 6.
 
 3. **Draft (implementer).** Write a short digest: what changed, per
    repo, in plain sentences. If a repo had nothing new, say so plainly
@@ -42,15 +41,17 @@ over many unattended runs, not a one-off demo.
    step 2 and compare against the draft line by line. Every claim in the
    digest must trace back to something actually observed in step 2 - not
    remembered from a previous run, not inferred, not guessed. Cut
-   anything that doesn't check out.
+   anything that doesn't check out. That includes claims about earlier
+   runs ("first run since X", "no runs logged"): open digest PRs count
+   as runs, so check them or leave the claim out.
 
 5. **Write, only if the check passes.**
    - If nothing new was found anywhere: append a short "quiet day" entry
      to `progress.md`. Do not touch `NOTES.md` - a commit for "nothing
      happened" is noise.
    - If something new was found: append the dated digest to `NOTES.md`,
-     commit on a branch, push, and open a PR against `main` (the review
-     in step 4 is the content gate - nothing reaches `NOTES.md` without
+     commit on a branch named `claude/daily-digest-<date>`, push, and open a PR
+     against `main` (the review in step 4 is the content gate - nothing reaches `NOTES.md` without
      passing it; the PR is a second, human-visible gate before it lands).
    - Either way, update each watched repo's `Last checked` value in
      `progress.md` to what was just gathered, so tomorrow's run starts
