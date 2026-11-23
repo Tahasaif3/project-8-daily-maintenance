@@ -1,6 +1,6 @@
 # Dreaming Loop - State
 
-last_reviewed_entry_date: 2026-11-16
+last_reviewed_entry_date: 2026-11-23
 
 ## Proposals made
 
@@ -79,3 +79,47 @@ Action needed by a human, outside SKILL.md: none of PRs #3-#96
 (daily-digest and dreaming-loop) has been merged - `main` has not moved
 since 2026-08-15. Until they are merged or closed,
 `main`'s spine stays at 2026-08-15.
+
+### 2026-11-23 review
+Reviewed the 7 daily-digest entries dated 2026-11-17 through 2026-11-23.
+All are on unmerged branches (PRs #98-#104); `main` still ends at
+2026-08-15 and no PR since #2 has been merged, including last week's
+review (#97). This branch is built on top of #97's branch, so merging
+this PR also lands #97's changes; #97 can then be closed.
+
+Repeated failures found:
+
+1. **False claims about run history.** 2026-11-19 and 2026-11-23 both
+   say "First run since 2026-08-15"; 2026-11-22 says "There are no
+   logged runs between 2026-08-15 and today". About 95 digest PRs were
+   open at the time, so all three claims are false (3 of 7 entries).
+   Step 4 says every claim must trace to observed data, but runs did not
+   treat statements about past runs as claims to check.
+   Fix (daily-digest step 4): one sentence saying claims about earlier
+   runs must be checked against open digest PRs, or left out.
+
+2. **`gh pr list` / `gh issue list` tried first, 403, then REST.** All 7
+   entries (2026-11-17 through 11-23) report a GraphQL 403 from
+   `gh pr list`/`gh issue list`, then the same data fetched with REST
+   `gh api`. #97 added the "use REST" paragraph, but step 2's first
+   sentence still names `gh pr list` / `gh issue list` as the tools.
+   Fix: see the rule deletion below.
+
+3. **Branch name in #97 doesn't match what runs use.** #97 specifies
+   `daily-digest/<date>`, and its step-1 stale-spine lookup searches for
+   that name. 6 of the 7 runs this week used `claude/daily-digest-<date>`
+   (11-17, 11-18, 11-20, 11-21, 11-22, 11-23); 11-19 used
+   `digest/2026-11-19`. The `claude/` prefix is the one this environment
+   lets runs push to. Fix: change both mentions to
+   `claude/daily-digest-<date>`.
+
+Still repeating, already addressed by #97 (unmerged): the stale spine.
+All 7 entries re-report project-4-fix-loop `5528f97` (2026-08-16) as new.
+
+Rule deletion: removed `gh pr list` / `gh issue list` from step 2's
+list of gathering tools. They fail with a 403 on every run (7 of 7 this
+week) and contradict the paragraph below them that says to use REST.
+
+Action needed by a human, outside SKILL.md: PRs #3-#104 are all open.
+Merge this PR (or #97), then merge or close the digest PRs. Until then
+`main`'s spine stays at 2026-08-15 and every run re-reports `5528f97`.
