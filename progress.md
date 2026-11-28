@@ -6,7 +6,7 @@
 - Tahasaif3/project-6-doorbell-loop
 
 ## Last checked
-project-4-fix-loop: 43bf5a5c030f7ace8b44cf080f1599bc97d467b3
+project-4-fix-loop: 5528f97caf0d15b2999c4f6684ee1ad9b8fd05d4
 project-5-codify-body: 2654519729696726701012663a9cb5ae7c49c62d
 project-6-doorbell-loop: 4d4a2a25712d185c911768c3025384575f44c822
 
@@ -43,3 +43,15 @@ First run for all three watched repos (each was `none`). Gathered full
 history: project-4-fix-loop had 2 commits and 1 open PR; project-5-codify-body
 had 9 commits and 0 PRs; project-6-doorbell-loop had 2 commits and 1 open PR.
 Full digest written to NOTES.md.
+
+### 2026-11-28
+All three repos checked. This is the first logged run since 2026-08-15,
+so there are no entries for the 104 days in between.
+- project-4-fix-loop: 1 new commit (`5528f97`, a one-line README
+  punctuation edit). PR #1 is still open. No issues. Last checked moved
+  to `5528f97`.
+- project-5-codify-body: nothing new. No 403 this time, because PR and
+  issue data came from the REST API (`gh pr list`/`gh issue list` use
+  GraphQL, which this environment blocks with a 403).
+- project-6-doorbell-loop: nothing new. PR #1 is still open.
+Draft checked against the git log and REST API output. Digest appended to NOTES.md.
